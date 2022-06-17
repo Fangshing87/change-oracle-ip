@@ -70,7 +70,7 @@ function main {
 			#检测ip地址连通性
 			ping -c $PINGTIMES $public_ip > temp.$public_ip.txt 2>&1
 			grep "$CHECK_PING" temp.$public_ip.txt
-			if [ $? != 0 ]
+			if [ $? != 999 ]
 			then
 				#ip地址通畅
 				echo -e "2. this IP is alive, nothing happened"
